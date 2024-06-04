@@ -1,0 +1,9 @@
+{
+  "name": "astra-client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+   "start" : "node script.js"
+  }
+}

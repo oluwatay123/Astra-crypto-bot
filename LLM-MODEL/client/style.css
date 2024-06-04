@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+body {
+  background: #343541;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  background: #343541;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Changed to flex-start */
+  justify-content: space-between;
+  padding-bottom: 70px; /* Ensure space at the bottom */
+}
+
+.ai-icon {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 480px;
+  top: 80px;
+}
+
+.sidebarContainer {
+  position: relative;
+  height: 100vh; /* Full screen height */
+}
+
+#chat_container {
+  flex: 1;
+  width: 100%;
+  height: calc(100% - 100px); /* Leave space for the input field */
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+  margin-bottom: 70px; /* Ensure space between messages and input field */
+}
+
+/* Hides scrollbar */
+#chat_container::-webkit-scrollbar {
+  /* display: none; */
+}
+
+.wrapper {
+  width: 100%;
+  padding: 15px;
+}
+
+.ai {
+  background: #40414f;
+}
+
+.chat {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.profile {
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai .profile {
+  background: transparent;
+}
+
+.profile img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.message {
+  flex: 1;
+  color: #dcdcdc;
+  font-size: 20px;
+  max-width: 100%;
+  overflow-x: scroll;
+  white-space: pre-wrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hides scrollbar */
+.message::-webkit-scrollbar {
+  display: none;
+}
+
+.Wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form-container {
+  padding: 50px;
+  background: #343541;
+  position: absolute;
+  left: 14.65%;
+  bottom: 0;
+  right: 0;
+  border: none;
+  margin-top: 70px;
+}
+
+form {
+  width: 60%;
+  min-width: 50%;
+  padding: 10px;
+  background: #40414f;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: fixed; /* Ensure it stays at the bottom */
+  border-radius: 50px;
+  bottom: 15px;
+  left: 57%;
+  right: 0;
+  transform: translateX(-50%);
+  align-items: center;
+  justify-content: center;
+}
+
+.random-message-container {
+  display: flex;
+  gap: 70px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.random-message {
+  background: #262633;
+  opacity: 0.5;
+  padding: 50px;
+  border-radius: 15px;
+  color: white;
+  margin-top: 300px;
+}
+
+.random-message:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.sidebar {
+  background: #262633;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  padding: 40px 0 0 200px;
+  flex-direction: column;
+  height: 100%; /* Full height of the parent container */
+}
+
+.image {
+  width: 40px;
+  object-fit: fill;
+  padding: 5px;
+}
+
+.clear {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  color: white;
+  font-size: large;
+  font-weight: 900;
+  margin: 10px;
+  transition: 1s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear:hover {
+  background: #40414f;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+textarea {
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+}
+
+form img {
+  width: 30px;
+  height: 30px;
+}
+
+.copy-btn {
+  background-color: #40414f;
+  border: none;
+  color: #dcdcdc;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.copy-btn:hover {
+  background-color: #5a5a6f;
+}
+
+.message.fade-out {
+  opacity: 0.5; /* Adjust the opacity as needed */
+}
